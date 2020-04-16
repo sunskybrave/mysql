@@ -1,0 +1,22 @@
+使用数据库时遇到了此问题：ERROR 1045 (28000): Access denied for user
+'root'\@'localhost' (using password: YES)
+
+对于此问题，可以用如下方法解决：
+
+https://blog.csdn.net/weixin_30652897/article/details/95049587?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1
+
+在操作中又遇到了新的问题：修改密码时提示语法错误：
+
+https://blog.csdn.net/hunt_er/article/details/82901331
+
+一般使用alter user 'root'\@'localhost' identified by '123';来更换密码
+
+同时需要注意到更新密码前要
+
+flush privileges;
+
+https://blog.csdn.net/s78365126/article/details/85267154
+
+对于数据库连接遇到的问题可以查看数据库的日志cd ar/log/mysql
+
+https://www.cnblogs.com/Lin-Yi/p/7515432.html
